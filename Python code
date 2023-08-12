@@ -1,0 +1,117 @@
+# Importing modules
+import numpy as np
+import skfuzzy as fuzz
+import matplotlib.pyplot as plt
+
+# Define the universe of discourse for RSS
+x_rss = np.arange(-115, -49, 1)
+
+# Define membership functions for linguistic labels
+rss_low = fuzz.trimf(x_rss, [-110, -110, -85])
+rss_moderate = fuzz.trimf(x_rss, [-100, -85, -70])
+rss_high = fuzz.trimf(x_rss, [-85, -70, -50])
+
+# Plot the membership functions
+plt.figure(figsize=(8, 6))
+
+plt.plot(x_rss, rss_low, label='Low')
+plt.plot(x_rss, rss_moderate, label='Moderate')
+plt.plot(x_rss, rss_high, label='High')
+
+plt.xlabel('Received Signal Strength (RSS)')
+plt.ylabel('Membership Degree')
+plt.title('Membership Functions for RSS')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Define the universe of discourse for Data Rate
+x_data_rate = np.arange(0, 101, 1)
+
+# Define membership functions for linguistic labels
+data_rate_low = fuzz.trimf(x_data_rate, [0, 0, 40])
+data_rate_moderate = fuzz.trimf(x_data_rate, [20, 40, 60])
+data_rate_high = fuzz.trimf(x_data_rate, [40, 60, 100])
+
+# Plot the membership functions
+plt.figure(figsize=(8, 6))
+
+plt.plot(x_data_rate, data_rate_low, label='Low')
+plt.plot(x_data_rate, data_rate_moderate, label='Moderate')
+plt.plot(x_data_rate, data_rate_high, label='High')
+
+plt.xlabel('Data Rate')
+plt.ylabel('Membership Degree')
+plt.title('Membership Functions for Data Rate')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Define the universe of discourse for Packet Delay
+x_packet_delay = np.arange(0, 101, 1)
+
+# Define membership functions for linguistic labels
+packet_delay_low = fuzz.trimf(x_packet_delay, [0, 0, 40])
+packet_delay_moderate = fuzz.trimf(x_packet_delay, [20, 40, 60])
+packet_delay_high = fuzz.trimf(x_packet_delay, [40, 60, 100])
+
+# Plot the membership functions
+plt.figure(figsize=(8, 6))
+
+plt.plot(x_packet_delay, packet_delay_low, label='Low')
+plt.plot(x_packet_delay, packet_delay_moderate, label='Moderate')
+plt.plot(x_packet_delay, packet_delay_high, label='High')
+
+plt.xlabel('Packet Delay')
+plt.ylabel('Membership Degree')
+plt.title('Membership Functions for Packet Delay')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Define the universe of discourse for Packet Loss Ratio
+x_packet_loss = np.arange(0, 11, 1)
+
+# Define membership functions for linguistic labels
+packet_loss_low = fuzz.trimf(x_packet_loss, [0, 0, 4])
+packet_loss_moderate = fuzz.trimf(x_packet_loss, [2, 4, 6])
+packet_loss_high = fuzz.trimf(x_packet_loss, [4, 6, 10])
+
+# Plot the membership functions
+plt.figure(figsize=(8, 6))
+
+plt.plot(x_packet_loss, packet_loss_low, label='Low')
+plt.plot(x_packet_loss, packet_loss_moderate, label='Moderate')
+plt.plot(x_packet_loss, packet_loss_high, label='High')
+
+plt.xlabel('Packet Loss Ratio')
+plt.ylabel('Membership Degree')
+plt.title('Membership Functions for Packet Loss Ratio')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Define the universe of discourse for Handover Decision
+x_handover_decision = np.arange(0, 101, 1)
+
+# Define membership functions for linguistic labels of Handover Decision
+handover_decision_low = fuzz.trimf(x_handover_decision, [0, 0, 40])
+handover_decision_moderate = fuzz.trimf(x_handover_decision, [20, 40, 60])
+handover_decision_high = fuzz.trimf(x_handover_decision, [40, 60, 100])
+
+# Plot the membership functions for Handover Decision (optional)
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8, 6))
+
+plt.plot(x_handover_decision, handover_decision_low, label='Low')
+plt.plot(x_handover_decision, handover_decision_moderate, label='Moderate')
+plt.plot(x_handover_decision, handover_decision_high, label='High')
+
+plt.xlabel('Handover Decision')
+plt.ylabel('Membership Degree')
+plt.title('Membership Functions for Handover Decision')
+plt.legend()
+plt.grid(True)
+plt.show()
+
